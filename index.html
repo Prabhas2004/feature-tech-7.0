@@ -799,7 +799,7 @@
         <h3>Welcome to Feature Tech 7.0</h3>
         <p>"Empowering Engineers: Build, Learn, and Succeed from Day One". </p>
         <p> ON</p>
-        <p>Date: 22/03/2025</p>
+        <p>Date: 29/03/2025</p>
         <p>Day: Saturday</p>
         <p>Location: Prestige Business Park, 33, <br>Marathahalli - Sarjapur Outer Ring Rd, <br>Bellandur, Bellandur Amanikere, <br>Bengaluru, Karnataka 560103</p>
         <div id="countdown-timer"></div>
@@ -988,27 +988,28 @@
         return;
       }
       
-      const eventDate = new Date("March 22, 2025 00:00:00").getTime();
+     const eventDate = new Date("March 29, 2025 00:00:00").getTime();
 
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const timeLeft = eventDate - now;
+const updateCountdown = () => {
+  const now = new Date().getTime();
+  const timeLeft = eventDate - now;
 
-        if (timeLeft <= 0) {
-          countdownElement.innerHTML = "<span style='color:#ffdd57;'>Event Started!</span>";
-          return;
-        }
+  if (timeLeft <= 0) {
+    countdownElement.innerHTML = "<span style='color:#ffdd57;'>Event Started!</span>";
+    return;
+  }
 
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML = `<span style="font-size:2rem; font-weight:bold;">${days} Days ${hours}h ${minutes}m ${seconds}s</span> Days Remaining`;
-      };
-      
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
+  countdownElement.innerHTML = `<span style="font-size:2rem; font-weight:bold;">${days} Days ${hours}h ${minutes}m ${seconds}s</span> Days Remaining`;
+};
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
     });
   </script>
 </body>
